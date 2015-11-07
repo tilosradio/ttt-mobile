@@ -66,7 +66,8 @@ module.exports.metadata =
     "cordova-plugin-statusbar": "1.0.1",
     "cordova-plugin-whitelist": "1.0.0",
     "ionic-plugin-keyboard": "1.0.7",
-    "cordova-plugin-inappbrowser": "1.0.1"
+    "cordova-plugin-inappbrowser": "1.0.1",
+    "cordova-plugin-geolocation": "1.0.1"
 }
 // BOTTOM OF METADATA
 });

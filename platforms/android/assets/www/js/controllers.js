@@ -13,16 +13,23 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('BusinessListCtrl', function($scope, pouchService) {
+.controller('BusinessListCtrl', function($scope, pouchService, position, $rootScope) {
     pouchService.allDocs({
       include_docs: true,
       attachments: true
     }).then(function (result) {
       $scope.$apply(function(){
         $scope.items = result.rows;
+
       });
     }).catch(function (err) {
       console.log(err);
+    });
+
+    $rootScope.$on('position', function(){
+    angular.forEach($scope.items, function(value, key) {
+             value.doc.distance = position.distance(value.doc.lat, value.doc.long);
+           });
     });
 })
 

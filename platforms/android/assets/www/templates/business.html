@@ -1,0 +1,32 @@
+<ion-view>
+  <ion-nav-title>{{business.name}}</ion-nav-title>
+  <ion-content class="padding">
+  <div class="list card">
+
+    <div ng-show="business.description" class="item item-text-wrap">
+      {{business.description}}
+    </div>
+
+    <div href="#" class="item item-text-wrap item-icon-left">
+      <i class="icon ion-card"></i>
+      Kedvezmény: <b>{{business.discount}}</b> {{business.discountDescription}}
+    </div>
+
+    <div browse-to="{{business.url}}" ng-show="business.url" class="item item-icon-left">
+      <i class="icon ion-link"></i>
+      {{business.url}}
+    </div>
+
+    <div browse-to="{{business.facebook}}" ng-show="business.facebook" class="item item-icon-left">
+      <i class="icon ion-social-facebook"></i>
+      {{business.facebook}}
+    </div>
+
+    <div ng-show="business.address" class="item item-icon-left">
+      <i class="icon ion-ios-location"></i>
+      {{business.address}}
+    </div>
+
+  </div>
+  </ion-content>
+</ion-view>

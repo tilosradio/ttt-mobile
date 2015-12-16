@@ -2,6 +2,9 @@
   <ion-nav-title>{{business.name}}</ion-nav-title>
   <ion-content class="padding">
   <div class="list card">
+    <div class="item" >
+      <img id="photo" ng-src="{{imgUrl}}" width="100%"/>
+    </div>
 
     <div ng-show="business.description" class="item item-text-wrap">
       {{business.description}}
@@ -22,10 +25,11 @@
       {{business.facebook}}
     </div>
 
-    <div ng-show="business.address" class="item item-icon-left">
+    <div browse-to="geo:{{business.lat}},{{business.long}}" ng-show="business.address" class="item item-icon-left">
       <i class="icon ion-ios-location"></i>
       {{business.address}}
     </div>
+
 
   </div>
   </ion-content>
